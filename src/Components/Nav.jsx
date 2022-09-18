@@ -416,9 +416,8 @@ const NavCont = styled.div`
         font-family: 'Poppins', sans-serif;
     }
     button{
-        width: 95%;
+        width: 100%;
         margin: auto;
-        margin-left: 2.5%;
         height: 8vh;
         font-size: 1rem;
         background: #22263c;
