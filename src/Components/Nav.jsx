@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useTransition, animated } from 'react-spring'
+import { Link } from 'react-router-dom'
 
 
 function Nav() {
@@ -34,12 +35,12 @@ function Nav() {
         </Left>
 
         <Mid>
-            <a href="#" onMouseOut={()=>{setShowMenu(false)}} onMouseOver={()=>{setShowMenu(true)}}>Payments</a>
-            <a href="#"  onMouseOut={()=>{setShowMenu2(false)}} onMouseOver={()=>{setShowMenu2(true)}}>Commerce</a>
-            <a href="#">Isuing</a>
-            <a href="#">Capital</a>
-            <a href="#">Grow</a>
-            <a href="#">Faas</a>
+            <Link to="/" onMouseOut={()=>{setShowMenu(false)}} onMouseOver={()=>{setShowMenu(true)}}>Payments</Link>
+            <Link to="/"  onMouseOut={()=>{setShowMenu2(false)}} onMouseOver={()=>{setShowMenu2(true)}}>Commerce</Link>
+            <Link to="/">Isuing</Link>
+            <Link to="/">Capital</Link>
+            <Link to="/">Grow</Link>
+            <Link to="/">Faas</Link>
         </Mid>
 
         <Right>
