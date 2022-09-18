@@ -61,7 +61,7 @@ const Content = styled.div`
     }
     button{
         @media (max-width: 480px) {
-            font-size: 1rem;
+            font-size: 1.3rem;
             width: 80%;
             height: 12vh;
             border: none;

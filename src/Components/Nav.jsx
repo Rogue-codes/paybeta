@@ -2,12 +2,19 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useTransition, animated } from 'react-spring'
 import { Link } from 'react-router-dom'
-
+import {BsFlagFill,BsFillHandbagFill,BsCreditCardFill} from 'react-icons/bs'
+import {FaNetworkWired,FaStoreAlt,FaFileInvoiceDollar} from 'react-icons/fa'
 
 function Nav() {
     const [showMenu, setShowMenu]= useState(false)
     const [showMenu2, setShowMenu2]= useState(false)
     const [clicked,setClicked]= useState(false)
+    const [dropDwn, setDropDwn]= useState(false)
+
+    const showDropdown = ()=>{
+        setClicked(!clicked)
+        setDropDwn(!dropDwn)
+    }
 
     const menuTransitions = useTransition(showMenu, {
         from: { opacity: 0 },
@@ -24,6 +31,16 @@ function Nav() {
         enter: { opacity: 1 },
         leave: { opacity: 0 },
       reverse: showMenu2,
+      delay: 200,
+        // config: config.molasses,
+      // onRest: () => set(!show),
+    })
+
+    const menuTransitions3 = useTransition(dropDwn, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+      reverse: dropDwn,
       delay: 200,
         // config: config.molasses,
       // onRest: () => set(!show),
@@ -49,7 +66,7 @@ function Nav() {
             </button>
         </Right>
 
-        <div className={clicked ? 'menu clicked' : 'menu'} onClick={()=>setClicked(!clicked)}>
+        <div className={clicked ? 'menu clicked' : 'menu'} onClick={showDropdown}>
             <div className='menuBtn' >
 
             </div>
@@ -76,26 +93,120 @@ function Nav() {
         )
       }
 
-{
-        menuTransitions2(
-        (styles, item) => item && <animated.div style={styles} className='animate2' onMouseOut={()=>{setShowMenu2(false)}} onMouseOver={()=>{setShowMenu2(true)}}>
-            <div className='pay'>
-                <h1>Store</h1>
-                <p>Start selling online</p>
-            </div>
+        {
+            menuTransitions2(
+            (styles, item) => item && <animated.div style={styles} className='animate2' onMouseOut={()=>{setShowMenu2(false)}} onMouseOver={()=>{setShowMenu2(true)}}>
+                <div className='pay'>
+                    <h1>Store</h1>
+                    <p>Start selling online</p>
+                </div>
 
-            <div className='pay'>
-                <h1>Payemt link</h1>
-                <p>Accept payment link without writing any code</p>
-            </div>
+                <div className='pay'>
+                    <h1>Payemt link</h1>
+                    <p>Accept payment link without writing any code</p>
+                </div>
 
-            <div className='pay'>
-                <h1>Invoices</h1>
-                <p>Create Professional invoices</p>
-            </div>
-        </animated.div>
-        )
-      }
+                <div className='pay'>
+                    <h1>Invoices</h1>
+                    <p>Create Professional invoices</p>
+                </div>
+            </animated.div>
+            )
+        }
+
+        {
+            menuTransitions3(
+             (styles, item) => item && <animated.div style={styles} className='dropdown' onMouseOut={()=>{setShowMenu2(false)}} onMouseOver={()=>{setShowMenu2(true)}}>
+                <div className="content">
+                    <h2>PAYMENTS</h2>
+                    <div className="contentcard">
+                        <div className="cleft">
+                            <BsFlagFill size='1.5rem'/>
+                        </div>
+                        <div className="cRight">
+                            <h2>Collect Payments</h2>
+                            <p>Collect Payments in 30+ Currencies</p>
+                        </div>
+                    </div>
+
+                    <div className="contentcard">
+                        <div className="cleft" style={{background:'#e9eaf3'}}>
+                            <FaNetworkWired size='1.5rem'/>
+                        </div>
+                        <div className="cRight">
+                            <h2>Send Money</h2>
+                            <p>send more to anyone or business globally</p>
+                        </div>
+                    </div>
+                    <div className="contentcard">
+                        <div className="cleft">
+                            <BsFillHandbagFill size='1.5rem'/>
+                        </div>
+                        <div className="cRight">
+                            <h2>Checkout demo</h2>
+                            <p>Experience checkout yourself</p>
+                        </div>
+                    </div>
+                </div>
+                <hr /> <br />
+                <div className="content">
+                    <h2>COMMERCE</h2>
+                    <div className="contentcard">
+                        <div className="cleft" style={{background:'#d9f4e4'}}>
+                            <FaStoreAlt size='1.5rem'/>
+                        </div>
+                        <div className="cRight">
+                            <h2>Store</h2>
+                            <p>Start selling online</p>
+                        </div>
+                    </div>
+
+                    <div className="contentcard">
+                        <div className="cleft" style={{background:'#e9eaf3'}}>
+                            <BsCreditCardFill size='1.5rem'/>
+                        </div>
+                        <div className="cRight">
+                            <h2 style={{color: ''}}>Payment Links</h2>
+                            <p>Accept payments without writing code</p>
+                        </div>
+                    </div>
+                    <div className="contentcard">
+                        <div className="cleft">
+                            <FaFileInvoiceDollar size='1.5rem'/>
+                        </div>
+                        <div className="cRight">
+                            <h2>Checkout demo</h2>
+                            <p>Experience checkout yourself</p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div className="contents">
+                    <div>
+                        <h2>Issuing</h2>
+                        <p>Issue physical & virtual cards</p>
+                    </div><br />
+
+                    <div>
+                        <h2>Capital</h2>
+                        <p>Get quick access to flexible</p>
+                    </div><br />
+
+                    <div>
+                        <h2>Grow</h2>
+                        <p>Register & incorporate your business from anywhere</p>
+                    </div><br />
+
+                    <div>
+                        <h2>FaaS</h2>
+                        <p>Embed financial service into your product</p>
+                    </div><br />
+
+                    <button>sign in</button>
+                </div>
+            </animated.div>
+            )
+        }
     </NavCont>
   )
 }
@@ -202,48 +313,126 @@ const NavCont = styled.div`
     position: relative;
     .menuBtn{
         width: 90%;
-        border: 2px solid #000;
-        transition:all .5s linear;
+        border: 1px solid #000;
+        transition:all .2s linear;
         &::before,
         &::after{
             content:'';
             position: absolute;
             width: 80%;
-            border: 2px solid #000;
+            border: 1px solid #000;
             left: 5%;
         }
         &::before{
             transform: translateY(-12px);
-            transition:all .5s linear;
+            transition:all .2s linear;
         }
         &::after{
             transform: translateY(10px);
-            transition:all .5s linear;
+            transition:all .2s linear;
         }
     }
 }
 .menu.clicked .menuBtn{
     transform: translateX(-0px);
     border: none;
-    transition:all .5s linear;
+    transition:all .2s linear;
 }
 .menu.clicked{
     .menuBtn{
         &::before{
-            transition:all .5s linear;
+            transition:all .2s linear;
             transform: rotate(45deg) ;
         }
         &::after{
-            transition:all .5s linear;
+            transition:all .2s linear;
             transform: rotate(-45deg) 
         }
+    }
+}
+.dropdown{
+    width: 100%;
+    height: 200vh;
+    background: #fff;
+    position: absolute;
+    z-index: 900;
+    left: 0;
+    top: 15%;
+    bottom: 0%;
+    .content{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5%;
+        h2{
+            font-family: 'Poppins', sans-serif;
+            font-size: .8rem;
+            color: #787878;
+        }
+        .contentcard{
+            h2{
+                font-size: 1rem;
+                color:#262c55;
+                font-family: 'Poppins', sans-serif;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .cleft{
+                width: 20%;
+                display: flex;
+                background: #fdf6e6;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                padding: 2%;
+                p{
+                    font-family: 'Poppins', sans-serif;
+                }
+            }
+            .cRight{
+                width: 75%;
+                padding: 2%;
+                p{
+                    font-size: .8rem;
+                    font-family: 'Poppins', sans-serif;
+                }
+            }
+        }
+    }
+}
+.contents{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    h2{
+        font-size: 1rem;
+        color:#262c55;
+        font-family: 'Poppins', sans-serif;
+    }
+    p{
+        font-size: 1rem;
+        color:#262c55;
+        font-family: 'Poppins', sans-serif;
+    }
+    button{
+        width: 95%;
+        margin: auto;
+        margin-left: 2.5%;
+        height: 8vh;
+        font-size: 1rem;
+        background: #22263c;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        border: none;
+        border-radius: 5px;
     }
 }
 `
 const Left = styled.div`
     @media (max-width: 480px) {
         font-size: 1rem;
-        margin-left: 10%;
+        margin-left: 15%;
     }
     width: 25%;
     height: 100%;

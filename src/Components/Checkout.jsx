@@ -63,7 +63,7 @@ const Left =styled.div`
 const Center =styled.div`
     @media (max-width: 480px) {
         width: 80%;
-        height: 100vh;
+        height: 80vh;
         background-position: 50% 40%;
         margin-top: 15%;
     }
