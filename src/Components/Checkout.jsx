@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import checkout from '../Assets/checkout.png'
 import {AiOutlineRight} from 'react-icons/ai'
 function Checkout() {
   return (
@@ -12,7 +11,9 @@ function Checkout() {
                 <button>Begin</button>
             </Content>
         </Left>
-        <Center></Center>
+        <Center>
+            <img src="/checkout.png" alt="" />
+        </Center>
         <Right>
             <ContentR>
                 <h2>Accept Payments</h2>
@@ -61,20 +62,17 @@ const Left =styled.div`
     
 const Center =styled.div`
     @media (max-width: 480px) {
-        width: 100%;
-        height: 120vh;
+        width: 80%;
+        height: 100vh;
         background-position: 50% 40%;
         margin-top: 15%;
     }
     width: 25%;
     height: 100%;
-    background: url(${checkout});
-    background-size: cover;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 `
 
 const Right =styled.div`
@@ -92,7 +90,7 @@ const Right =styled.div`
 
 const Content =styled.div`
     @media (max-width: 480px) {
-        height: 80vh;
+        height: auto;
     }
     height: 60vh;
     display: flex;
@@ -102,6 +100,7 @@ const Content =styled.div`
     h2{
         @media (max-width: 480px) {
             font-size: 1.3rem;
+            margin-bottom: 5%;
         }
         font-size: 2vw;
         font-family: 'Poppins', sans-serif;
@@ -109,6 +108,7 @@ const Content =styled.div`
     p{
         @media (max-width: 480px) {
             font-size: 1rem;
+            margin-bottom: 5%;
         }
         font-size: 1.3vw;
         line-height: 35px;

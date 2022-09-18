@@ -145,6 +145,7 @@ const Bottom = styled.div`
     ul{
         @media (max-width: 480px) {
             width: 100%;
+            list-style-type: none;
         }
         li{
             @media (max-width: 480px) {
