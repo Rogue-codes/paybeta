@@ -352,10 +352,11 @@ const NavCont = styled.div`
 }
 .dropdown{
     width: 100%;
-    height: 200vh;
+    max-height: 100vh;
+    overflow-y:scroll;
     background: #fff;
     position: absolute;
-    z-index: 900;
+    z-index: 9000;
     left: 0;
     top: 15%;
     bottom: 0%;
