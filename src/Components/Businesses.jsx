@@ -60,9 +60,9 @@ const Top = styled.div`
 `
 const Bottom = styled.div`
     @media (max-width: 480px) {
-        margin-top: 8%;
+        margin-top: 0%;
         flex-wrap: wrap;
-        height: 20vh;
+        height: auto;
     }
     width: 100%;
     height: 60%;
@@ -73,7 +73,7 @@ const Bottom = styled.div`
 const Cards = styled.div`
     @media (max-width: 480px) {
         min-width: 22%;
-        margin: 2%;
+        margin: 5%;
     }
     width: 12%;
     height: 80%;

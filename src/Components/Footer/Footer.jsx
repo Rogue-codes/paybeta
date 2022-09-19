@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import {RiArrowDropDownLine} from 'react-icons/ri'
 import { footerData } from './footerData'
+import MobileFoot from './MobileFoot'
 function Footer() {
   const btnRef = useRef()
   const [showMenu, setShowMenu] = useState(false)
@@ -117,6 +118,7 @@ function Footer() {
         </ul>
       </Rightt>
     </SecondFoot>
+    <MobileFoot/>
     </>
   )
 }
@@ -124,6 +126,9 @@ function Footer() {
 export default Footer
 
 const Container = styled.footer`
+  @media (max-width: 480px) {
+    display: none;
+  }
   width: 90%;
   margin: auto;
   min-height: auto;
@@ -154,7 +159,10 @@ const Container = styled.footer`
   }
 `
 const SecondFoot = styled.div`
-border-top: 1px solid #eceaea;
+  @media (max-width: 480px) {
+    display: none;
+  }
+  border-top: 1px solid #eceaea;
   width: 90%;
   height: 20vh;
   margin: auto;

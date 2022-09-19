@@ -24,6 +24,7 @@ export default Second
 const Container = styled.div`
     @media (max-width: 480px) {
         flex-direction: column;
+        margin-top: 0%;
     }
     width: 90%;
     margin: auto;
@@ -45,6 +46,7 @@ const Right = styled.div`
     @media (max-width: 480px) {
         width: 100%;
         height: 60vh;
+        margin-top: -10%;
     }
     width: 55%;
     height: 100%;
