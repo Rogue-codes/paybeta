@@ -442,6 +442,9 @@ const Left = styled.div`
     justify-content: center;
     align-items: center;
     h1{
+        @media (max-width: 480px) {
+            font-size: 1.8rem;
+        }
         font-size: 2.5vw;
         font-family: 'Alfa Slab One', cursive;
         span{
