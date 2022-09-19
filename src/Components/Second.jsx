@@ -73,7 +73,7 @@ const Top = styled.div`
 `
 const Bottom = styled.div`
     @media (max-width: 480px) {
-        height: 40vh;
+        height: auto;
     }
     margin-top: 5%;
     width: 100%;
