@@ -12,6 +12,11 @@ function First() {
 export default First
 
 const Container = styled.div`
+    @media (max-width: 480px) {
+      height: auto;
+      padding-top: 2%;
+      padding-bottom: 2%;
+    }
     margin-top: 10%;
     width: 100%;
     height: 50vh;

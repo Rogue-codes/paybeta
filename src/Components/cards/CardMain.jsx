@@ -21,4 +21,5 @@ export default CardMain
 const Container = styled.div`
     width: 100%;
     height: auto;
+    background: #1d1d1d;
 `

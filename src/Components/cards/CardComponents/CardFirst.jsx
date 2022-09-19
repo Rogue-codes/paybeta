@@ -15,6 +15,12 @@ function CardFirst() {
 
 export default CardFirst
 const Container = styled.div`
+    @media (max-width: 480px) {
+        margin-bottom: 15%;
+        height: auto;
+        padding-bottom: 5%;
+        padding-top: 8%;
+    }
     width: 100%;
     height: 100vh;
     background: #1d1d1d;

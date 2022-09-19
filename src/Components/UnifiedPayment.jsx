@@ -13,7 +13,8 @@ export default UnifiedPayment
 
 const Container = styled.div`
     @media (max-width: 480px) {
-      margin-top: 2%;
+      margin-top: 5%;
+      margin-bottom: 5%;
       height: auto;
     }
     margin-top: 6%;

@@ -60,7 +60,7 @@ const Top = styled.div`
 `
 const Bottom = styled.div`
     @media (max-width: 480px) {
-        margin-top: 0%;
+        margin-bottom: 10%;
         flex-wrap: wrap;
         height: auto;
     }

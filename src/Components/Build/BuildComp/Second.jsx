@@ -25,6 +25,7 @@ const Container = styled.div`
     @media (max-width: 480px) {
         flex-direction: column;
         margin-top: 0%;
+        height: auto;
     }
     width: 90%;
     margin: auto;
@@ -46,7 +47,7 @@ const Right = styled.div`
     @media (max-width: 480px) {
         width: 100%;
         height: 60vh;
-        margin-top: -10%;
+        margin-top: 10%;
     }
     width: 55%;
     height: 100%;
@@ -59,7 +60,7 @@ const Right = styled.div`
 `
 const Content = styled.div`
     @media (max-width: 480px) {
-        height: 60vh;
+        height: auto;
         margin-top: 0;
     }
     margin-top: 20%;
