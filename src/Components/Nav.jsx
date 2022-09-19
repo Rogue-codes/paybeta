@@ -222,6 +222,7 @@ const NavCont = styled.div`
     width: 100%;
     height: 15vh;
     display: flex;
+    align-items: center;
     .animate{
         @media screen and (min-width:481px) and (max-width:768px) {
             width: 30%;
@@ -432,7 +433,7 @@ const NavCont = styled.div`
 const Left = styled.div`
     @media (max-width: 480px) {
         font-size: 1rem;
-        margin-left: 15%;
+        margin-left: 7%;
     }
     width: 25%;
     height: 100%;
@@ -441,6 +442,7 @@ const Left = styled.div`
     justify-content: center;
     align-items: center;
     h1{
+        font-size: 2.5vw;
         font-family: 'Alfa Slab One', cursive;
         span{
             color:#fb9129
