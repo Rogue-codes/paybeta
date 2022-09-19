@@ -63,7 +63,7 @@ const Content = styled.div`
         @media (max-width: 480px) {
             font-size: 1.3rem;
             width: 80%;
-            height: 12vh;
+            height: 8vh;
             border: none;
             margin-top: 5%;
         }

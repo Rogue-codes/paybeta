@@ -65,6 +65,7 @@ const Container = styled.div`
         @media (max-width: 480px) {
             font-size: 1rem;
             width: 60%;
+            height: 8vh;
         }
         height: 12vh;
         width: 20%;

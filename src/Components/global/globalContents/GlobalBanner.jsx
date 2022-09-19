@@ -82,6 +82,7 @@ const Content = styled.div`
                 font-size: 1rem;
                 width: 60%;
                 margin-bottom: 6%;
+                height: 8vh;
             }
             width: 40%;
             height: 10vh;

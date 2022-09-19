@@ -5,7 +5,7 @@ import Businesses from '../Components/Businesses'
 import CardMain from '../Components/cards/CardMain'
 import Checkout from '../Components/Checkout'
 import DocsMain from '../Components/Documentation/DocsMain'
-// import Footer from '../Components/Footer/Footer'
+import Footer from '../Components/Footer/Footer'
 import GlobalMain from '../Components/global/GlobalMain'
 import Landing from '../Components/Landing'
 import Nav from '../Components/Nav'
@@ -24,7 +24,7 @@ function Home() {
         <CardMain/>
         <DocsMain/>
         <GlobalMain/>
-        {/*<Footer/> */}
+        <Footer/>
     </Container>
   )
 }
