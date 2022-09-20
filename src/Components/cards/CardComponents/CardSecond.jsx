@@ -17,6 +17,7 @@ const Container = styled.div`
     @media (max-width: 480px) {
       height: auto;
       margin-bottom: 10%;
+      margin-top: 5%;
     }
     width: 100%;
     height: 90vh;

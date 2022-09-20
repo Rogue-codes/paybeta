@@ -38,7 +38,6 @@ export default Third
 const Container = styled.div`
     @media (max-width: 480px) {
         flex-direction: column-reverse;
-
     }
     width: 90%;
     margin: auto;
@@ -50,6 +49,7 @@ const Container = styled.div`
 const Left = styled.div`
     @media (max-width: 480px) {
         width: 100%;
+        height: auto;
     }
     width: 55%;
     height: auto;
@@ -70,6 +70,7 @@ const Left = styled.div`
 const Right = styled.div`
     @media (max-width: 480px) {
         width: 100%;
+        height: auto;
     }
     width: 45%;
     height: 100vh;
@@ -78,6 +79,9 @@ const Right = styled.div`
     justify-content: space-evenly;
 `
 const Content = styled.div`
+    @media (max-width: 480px) {
+        margin-top: 0%;
+    }
     height: 100vh;
     margin-top: -10%;
     background: url(${creator});

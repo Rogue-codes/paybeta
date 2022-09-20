@@ -217,7 +217,8 @@ const NavCont = styled.div`
     @media (max-width:480px){
         justify-content: space-between;
         align-items: center;
-        padding: 2%;
+        width: 90%;
+        margin: auto;
     }
     width: 100%;
     height: 15vh;
